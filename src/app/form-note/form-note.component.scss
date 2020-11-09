@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 20px auto 10px;
+  }
+  
+  .container > * {
+    width: 100%;
+  }
+
+  .btn-save {
+    margin-left: 10px;
+    background-color: #17ad5a;
+    color: #fff;
+  }
+
+  .pull-right button{
+      float: right;
+  }

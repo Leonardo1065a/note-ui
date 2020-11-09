@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="idNote != null ? edit() : save()">
+  <div class="container">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Body</mat-label>
+      <textarea matInput formControlName="body"></textarea>
+    </mat-form-field>
+
+    <div class="pull-right button-row">
+      <button mat-stroked-button class="btn-save" type="submit">Save</button>
+      <button mat-stroked-button (click)="cancel()">Cancel</button>
+    </div>
+  </div>
+</form>

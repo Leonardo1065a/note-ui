@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600;1,800&display=swap');
+
+body, h3, p {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+}
+.text-center {
+    text-align: center;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.color-gradinte-default {
+    background-color: #eb9bff;
+    background-image: linear-gradient(to right, #eb9bff, #40d3ff);
+}
+
+.button-default {
+    background-color: #8390ff;
+    color: #fff;
+}

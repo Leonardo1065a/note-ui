@@ -1,0 +1,26 @@
+<header>
+  <form class="search-form">
+    <mat-form-field class="full-width">
+      <input matInput type="search" placeholder="Filter" [(ngModel)]="search" name="search"/>
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </form>
+</header>
+
+<ng-container *ngFor="let note of service.getNotes() | filter: search; let i = index">
+  <div class="body">
+    <button mat-icon-button class="remove" (click)="remove(note.id)">
+      <mat-icon>clear</mat-icon>
+    </button>
+    <div class="box" fxLayout="column" fxLayoutAlign="center center" [ngClass]="{'last': service.getNotes().length - 1 == i}" (click)="editNote(note)">
+      <h3>{{ note.title }}</h3>
+      <p>{{ note.body }}</p>
+    </div>
+  </div>
+</ng-container>
+
+<footer class="footer">
+  <div fxLayout="column" fxLayoutAlign="end center">
+    <button mat-flat-button class="button-default btn-add" (click)="addNote()">+ Add</button>
+  </div>
+</footer>
